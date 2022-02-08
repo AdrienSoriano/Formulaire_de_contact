@@ -1,0 +1,148 @@
+$h1FontStyle : Varela;
+$textFontStyle : Spinnaker;
+$validationColor : #0DA02E;
+$errorColor : #D80404;
+$errorBackgroundColor : #FF0E0E;
+$h1FontSize : 30px;
+$pFontSize : 20px;
+$inputFontSize : 20px;
+$spanFontSize : 14px;
+$pFontSizePhone : 18px;
+$inputFontSizePhone : 18px;
+$spanFontSizePhone : 10px;
+$placeHolderFontSize : 16px;
+
+
+// Light mode : 
+
+$formBackgroundColor : #F9F9F9;
+$inputBackgroundColor : #FFFFFF;
+$buttonBackgroundColor : #1662D3;
+$textColor : #212121;
+$spanColor : #FF0000;
+$placeholderColor : #898989;
+$caretColor : #00B1E9;
+$moonHover : #212121;
+$validationBackgroundColor : #9FCE97;
+
+// Dark mode : 
+
+$formBackgroundColorDark : #0d0d1c;
+$inputBackgroundColorDark : #567de2;
+$textColorDark : #cacaca;
+$sunHover : #00f0ff;
+$validationBackgroundColorDark: #B2DFAB;
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    height: 120vh;
+    width: 99vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+}
+form{
+    justify-self: center;
+    align-self: center;
+    height: 90%;
+    width: 65%;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 5% 40% 10% 40% 5%;
+    grid-template-rows: 10% 10% 15% 15% 15% 20% 10% 5%;
+}
+h1{
+    font-size: $h1FontSize;
+    font-family: $h1FontStyle;
+    grid-area: 1 / 1 / 1 / -1;
+    justify-self: center;
+    align-self: flex-end;
+}
+#dark{
+    grid-area: 1 / 5 / 1 / 5;
+    justify-items: center;
+    align-self: center;
+}
+p{
+    font-size: $pFontSize;
+    font-family: $textFontStyle;
+}
+p:nth-child(1n){
+    grid-area: 3 / 2 / 3 / 2;
+    align-self: flex-start;
+}
+p:nth-child(2n){
+    grid-area: 4 / 2 / 4 / 2;
+    align-self: flex-start;
+}
+p:nth-child(4n){
+    grid-area: 5 / 2 / 5 / 2;
+}
+p:nth-child(5n){
+    grid-area: 6 / 2 / 6 / 2;
+}
+.firstName{
+    grid-area: 3 / 2 / 3 / 2;
+    align-self: center;
+    height: 30%;
+}
+.lastName{
+    grid-area: 3 / 4 / 3 / 4;
+    align-self: center;
+    height: 30%;
+}
+.mail{
+    grid-area: 4 / 2 / 4 / 2;
+    align-self: center;
+    height: 30%;
+}
+.subject{
+    grid-area: 5 / 2 / 5 / 2;
+    align-self: center;
+    height: 30%;
+}
+.message{
+    grid-area: 6 / 2 / 6 / -2;
+    align-self: center;
+    height: 70%;
+}
+button{
+    grid-area: 7 / 2 / 7 / 2;
+    font-family: $h1FontStyle;
+    font-size: $pFontSize;
+    font-family: $textFontStyle;
+    align-self: center;
+    height: 40%;
+    width: 40%;
+}
+span{
+    grid-area: 8 / 2 / 8 / 2;
+    font-family: $textFontStyle;
+    font-size: $spanFontSize;
+}
+
+
+
+.light-mode{
+    background-image: url("../Assets/Media/light_background.png");
+    
+    form{
+        background: rgba(243, 243, 243, 0.6);
+    }
+    h1{
+        color: $textColor;
+    }
+    p{
+        color: $textColor;
+    }
+    span{
+        color: $spanColor;
+    }
+}
