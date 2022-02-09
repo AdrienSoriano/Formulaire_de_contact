@@ -1,5 +1,5 @@
 $h1FontStyle : Varela;
-$textFontStyle : Spinnaker;
+$textFontStyle : Sarala;
 $validationColor : #0DA02E;
 $errorColor : #D80404;
 $errorBackgroundColor : #FF0E0E;
@@ -33,6 +33,49 @@ $textColorDark : #cacaca;
 $sunHover : #00f0ff;
 $validationBackgroundColorDark: #B2DFAB;
 
+.light-mode{
+    background-image: url("../Assets/Media/light_background.png");
+    
+    form{
+        background: rgba(243, 243, 243, 0.6);
+    }
+    h1{
+        color: $textColor;
+    }
+    .fa-moon:active{
+        background-color: #565656;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+        //
+    }
+    p{
+        color: $textColor;
+    }
+    span{
+        color: $spanColor;
+    }
+    input{
+        color: $textColor;
+        background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
+    }
+    textarea{
+        color: $textColor;
+        background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
+    }
+    button{
+        background-color: rgba(22, 98, 211, 0.6);
+    }
+    button:hover{
+        background-color: rgba(22, 98, 211, 0.4);
+    }
+    button:active{
+        background: rgba(22, 98, 211, 0.25);
+        box-shadow: inset 0px 4px 4px #0F0F0F;
+    }
+}
 
 *{
     margin: 0;
@@ -65,14 +108,46 @@ h1{
     justify-self: center;
     align-self: flex-end;
 }
-#dark{
+.fa-moon{
     grid-area: 1 / 5 / 1 / 5;
     justify-items: center;
     align-self: center;
+    font-size: 50px;
+}
+.fa-moon:hover{
+    cursor: pointer;
+    opacity: 70%;
 }
 p{
     font-size: $pFontSize;
     font-family: $textFontStyle;
+}
+input{
+    border: none;
+    outline: none;
+    font-size: 20px;
+    caret-color: $caretColor;
+    padding-left: 10px;
+}
+::placeholder{
+    font-family: $textFontStyle;
+    font-size: 16px;
+    position: absolute;
+}
+textarea{
+    border: none;
+    outline: none;
+    font-size: 20px;
+    caret-color: $caretColor;
+    padding-left: 10px;
+}
+input:focus::placeholder{
+    transition: 0.5s ease-in;
+    color: transparent;
+}
+textarea:focus::placeholder{
+    transition: 0.5s ease-in;
+    color: transparent;
 }
 p:nth-child(1n){
     grid-area: 3 / 2 / 3 / 2;
@@ -110,8 +185,8 @@ p:nth-child(5n){
 }
 .message{
     grid-area: 6 / 2 / 6 / -2;
-    align-self: center;
-    height: 70%;
+    align-self: flex-end;
+    height: 72%;
 }
 button{
     grid-area: 7 / 2 / 7 / 2;
@@ -121,28 +196,17 @@ button{
     align-self: center;
     height: 40%;
     width: 40%;
+    background-color: $buttonBackgroundColor;
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px rgba(23, 23, 23, 0.25);
+    border: none;
+}
+button:hover{
+    cursor: pointer;
 }
 span{
     grid-area: 8 / 2 / 8 / 2;
     font-family: $textFontStyle;
     font-size: $spanFontSize;
-}
-
-
-
-.light-mode{
-    background-image: url("../Assets/Media/light_background.png");
-    
-    form{
-        background: rgba(243, 243, 243, 0.6);
-    }
-    h1{
-        color: $textColor;
-    }
-    p{
-        color: $textColor;
-    }
-    span{
-        color: $spanColor;
-    }
+    align-self: center;
 }
