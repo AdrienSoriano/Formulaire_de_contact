@@ -10,12 +10,14 @@
     <script src="https://kit.fontawesome.com/a9224966b4.js" crossorigin="anonymous"></script>
     <title>Contact</title>
 </head>
-<body class="light-mode">
+<body id="body" class="light-mode">
 
     <form action="">
         <h1>Nous contacter</h1>
-        <i class="fa-solid fa-moon"></i>
-
+        <div class="dark">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+        </div>
         <p>Entrez votre prénom et votre nom<span>*</span> :</p>
         <input type="text" class="firstName" placeholder="Prénom">
         <input type="text" class="lastName" placeholder="Nom">
@@ -27,10 +29,10 @@
         <textarea style="resize:none" name="" class="message" cols="30" rows="10" placeholder="Saisie du message..."></textarea>
         <button>Soumettre</button>
         <span>*Les champs sont obligatoires et ne doivent en aucun cas être vides.</span>
-
+        
     </form>
     
-<!--
-    <script src="JS/app.js"></script>-->
+
+    <script src="JS/app.js"></script>
 </body>
 </html>
