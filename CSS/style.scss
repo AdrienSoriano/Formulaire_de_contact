@@ -30,8 +30,10 @@ $validationBackgroundColor : #9FCE97;
 $formBackgroundColorDark : #0d0d1c;
 $inputBackgroundColorDark : #567de2;
 $textColorDark : #cacaca;
+$sunColor : #e4a90f;
 $sunHover : #00f0ff;
 $validationBackgroundColorDark: #B2DFAB;
+$buttonBackgroundColorClickedDark: #193B70;
 
 .light-mode{
     background-image: url("../Assets/Media/light_background.png");
@@ -97,34 +99,36 @@ $validationBackgroundColorDark: #B2DFAB;
     .fa-sun:active{
         background-color: #565656;
   color: transparent;
-  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  text-shadow: 2px 2px 3px rgba(0, 255, 242, 0.5);
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
     }
     p{
-        color: $textColor;
+        color: $textColorDark;
     }
     span{
         color: $spanColor;
     }
     input{
-        color: $textColor;
-        background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
+        color: $textColorDark;
+        background-color: rgba(86, 125, 226, 0.2); // fond de l'input opacité à 20%
     }
     textarea{
         color: $textColor;
-        background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
+        background-color: rgba(86, 125, 226, 0.2); // fond de l'input opacité à 20%
     }
     button{
-        background-color: rgba(22, 98, 211, 0.6);
+        background-color: rgba(22, 98, 211);
+        color: $textColorDark;
     }
     button:hover{
-        background-color: rgba(22, 98, 211, 0.4);
+        background: #3687FF;
+        box-shadow: 0px 0px 15px #00F0FF;
     }
     button:active{
-        background: rgba(22, 98, 211, 0.25);
-        box-shadow: inset 0px 4px 4px #0F0F0F;
+        background: $buttonBackgroundColorClickedDark;
+        box-shadow: inset 0px 6px 10px rgba(255, 255, 255, 0.25);
     }
 }
 
@@ -140,8 +144,11 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: grid;
+    grid-template-columns: 21% 80%;
+    grid-template-rows: 85% 15%;
 }
 form{
+    grid-area: 1 / 1 / -1 / -1;
     justify-self: center;
     align-self: center;
     height: 90%;
@@ -182,10 +189,12 @@ div{
     grid-area: 1 / 1 / 1 / 1;
     justify-items: center;
     align-self: center;
+    color: $sunColor;
 }
 .fa-sun:hover{
     cursor: pointer;
-    opacity: 70%;
+    color: $sunHover;
+    text-shadow: 0px 0px 15px rgba(0, 238, 255, 0.7);
 }
 p{
     font-size: $pFontSize;
@@ -258,13 +267,13 @@ p:nth-child(5n){
     height: 72%;
 }
 button{
-    grid-area: 7 / 2 / 7 / 2;
+    grid-area: 2 / 2 / 2 / 2;
     font-family: $h1FontStyle;
     font-size: $pFontSize;
     font-family: $textFontStyle;
-    align-self: center;
-    height: 40%;
-    width: 40%;
+    align-self: flex-start;
+    height: 20%;
+    width: 10%;
     background-color: $buttonBackgroundColor;
     border-radius: 5px;
     box-shadow: 5px 5px 4px rgba(23, 23, 23, 0.25);
