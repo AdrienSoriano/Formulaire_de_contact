@@ -58,9 +58,6 @@ $buttonBackgroundColorClickedDark: #193B70;
     p{
         color: $textColor;
     }
-    span{
-        color: $spanColor;
-    }
     input{
         color: $textColor;
         background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
@@ -78,6 +75,9 @@ $buttonBackgroundColorClickedDark: #193B70;
     button:active{
         background: rgba(22, 98, 211, 0.25);
         box-shadow: inset 0px 4px 4px #0F0F0F;
+    }
+    .resultValidated{
+        background: rgba(159, 206, 151, 0.6);
     }
 }
 
@@ -107,9 +107,6 @@ $buttonBackgroundColorClickedDark: #193B70;
     p{
         color: $textColorDark;
     }
-    span{
-        color: $spanColor;
-    }
     input{
         color: $textColorDark;
         background-color: rgba(86, 125, 226, 0.2); // fond de l'input opacité à 20%
@@ -129,6 +126,9 @@ $buttonBackgroundColorClickedDark: #193B70;
     button:active{
         background: $buttonBackgroundColorClickedDark;
         box-shadow: inset 0px 6px 10px rgba(255, 255, 255, 0.25);
+    }
+    .resultValidated{
+        background: rgba(156, 221, 145, 0.4);
     }
 }
 
@@ -165,6 +165,10 @@ h1{
     grid-area: 1 / 1 / 1 / -1;
     justify-self: center;
     align-self: flex-end;
+}
+span{
+    font-family: $textFontStyle;
+    font-size: $spanFontSize;
 }
 div{
     grid-area: 1 / 6 / 1 / 6;
@@ -237,6 +241,7 @@ span:nth-of-type(1){
     font-size: 12px;
     padding-bottom: 30px;
     padding-left: 10px;
+    color: $spanColor;
 }
 span:nth-of-type(2){
     grid-area: 3 / 5 / 3 / 5;
@@ -244,6 +249,7 @@ span:nth-of-type(2){
     font-size: 12px;
     padding-bottom: 30px;
     padding-left: 10px;
+    color: $spanColor;
 }
 p:nth-of-type(2){
     grid-area: 4 / 2 / 4 / 2;
@@ -255,6 +261,7 @@ span:nth-of-type(3){
     font-size: 12px;
     padding-bottom: 30px;
     padding-left: 10px;
+    color: $spanColor;
 }
 p:nth-of-type(3){
     grid-area: 5 / 2 / 5 / 2;
@@ -265,6 +272,7 @@ span:nth-of-type(4){
     font-size: 12px;
     padding-bottom: 30px;
     padding-left: 10px;
+    color: $spanColor;
 }
 p:nth-of-type(4){
     grid-area: 6 / 2 / 6 / 2;
@@ -275,10 +283,12 @@ span:nth-of-type(5){
     font-size: 12px;
     padding-left: 10px;
     padding-top: 5px;
+    color: $spanColor;
 }
-span:nth-of-type(6){
+.resultError{
     grid-area: 7 / 3 / 7 / -2;
     justify-self: flex-start;
+    align-self: center;
     font-size: 22px;
     background: rgba(255, 14, 14, 0.2);
     border-radius: 50px;
@@ -288,8 +298,26 @@ span:nth-of-type(6){
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
 }
 .fa-circle-xmark{
+    font-size: 35px;
+}
+.resultValidated{
+    grid-area: 7 / 3 / 7 / -2;
+    justify-self: flex-start;
+    align-self: center;
+    font-size: 22px;
+    color: $validationColor;
+    border-radius: 50px;
+    text-align: center;
+    width: 35%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-circle-check{
     font-size: 35px;
 }
 .firstName{
@@ -333,9 +361,8 @@ button{
 button:hover{
     cursor: pointer;
 }
-span{
+span:nth-of-type(8){
     grid-area: 8 / 2 / 8 / -2;
-    font-family: $textFontStyle;
-    font-size: $spanFontSize;
     align-self: center;
+    color: $spanColor;
 }

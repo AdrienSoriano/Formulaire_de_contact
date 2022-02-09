@@ -21,9 +21,6 @@
 .light-mode p {
   color: #212121;
 }
-.light-mode span {
-  color: #FF0000;
-}
 .light-mode input {
   color: #212121;
   background-color: rgba(255, 255, 255, 0.7);
@@ -41,6 +38,9 @@
 .light-mode button:active {
   background: rgba(22, 98, 211, 0.25);
   box-shadow: inset 0px 4px 4px #0F0F0F;
+}
+.light-mode .resultValidated {
+  background: rgba(159, 206, 151, 0.6);
 }
 
 .dark-mode {
@@ -69,9 +69,6 @@
 .dark-mode p {
   color: #cacaca;
 }
-.dark-mode span {
-  color: #FF0000;
-}
 .dark-mode input {
   color: #cacaca;
   background-color: rgba(86, 125, 226, 0.2);
@@ -91,6 +88,9 @@
 .dark-mode button:active {
   background: #193B70;
   box-shadow: inset 0px 6px 10px rgba(255, 255, 255, 0.25);
+}
+.dark-mode .resultValidated {
+  background: rgba(156, 221, 145, 0.4);
 }
 
 * {
@@ -127,6 +127,11 @@ h1 {
   grid-area: 1/1/1/-1;
   justify-self: center;
   align-self: flex-end;
+}
+
+span {
+  font-family: Sarala;
+  font-size: 14px;
 }
 
 div {
@@ -248,6 +253,7 @@ span:nth-of-type(1) {
   font-size: 12px;
   padding-bottom: 30px;
   padding-left: 10px;
+  color: #FF0000;
 }
 
 span:nth-of-type(2) {
@@ -256,6 +262,7 @@ span:nth-of-type(2) {
   font-size: 12px;
   padding-bottom: 30px;
   padding-left: 10px;
+  color: #FF0000;
 }
 
 p:nth-of-type(2) {
@@ -269,6 +276,7 @@ span:nth-of-type(3) {
   font-size: 12px;
   padding-bottom: 30px;
   padding-left: 10px;
+  color: #FF0000;
 }
 
 p:nth-of-type(3) {
@@ -281,6 +289,7 @@ span:nth-of-type(4) {
   font-size: 12px;
   padding-bottom: 30px;
   padding-left: 10px;
+  color: #FF0000;
 }
 
 p:nth-of-type(4) {
@@ -293,11 +302,13 @@ span:nth-of-type(5) {
   font-size: 12px;
   padding-left: 10px;
   padding-top: 5px;
+  color: #FF0000;
 }
 
-span:nth-of-type(6) {
+.resultError {
   grid-area: 7/3/7/-2;
   justify-self: flex-start;
+  align-self: center;
   font-size: 22px;
   background: rgba(255, 14, 14, 0.2);
   border-radius: 50px;
@@ -307,9 +318,29 @@ span:nth-of-type(6) {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .fa-circle-xmark {
+  font-size: 35px;
+}
+
+.resultValidated {
+  grid-area: 7/3/7/-2;
+  justify-self: flex-start;
+  align-self: center;
+  font-size: 22px;
+  color: #0DA02E;
+  border-radius: 50px;
+  text-align: center;
+  width: 35%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-circle-check {
   font-size: 35px;
 }
 
@@ -361,9 +392,8 @@ button:hover {
   cursor: pointer;
 }
 
-span {
+span:nth-of-type(8) {
   grid-area: 8/2/8/-2;
-  font-family: Sarala;
-  font-size: 14px;
   align-self: center;
+  color: #FF0000;
 }/*# sourceMappingURL=style.css.map */
