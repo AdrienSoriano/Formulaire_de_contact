@@ -138,7 +138,7 @@ div {
   grid-area: 1/6/1/6;
   width: 100%;
   height: 100%;
-  justify-items: center;
+  justify-items: flex-start;
   align-self: center;
   font-size: 50px;
   display: grid;
@@ -243,12 +243,12 @@ textarea:focus::placeholder {
 }
 
 p:nth-of-type(1) {
-  grid-area: 3/2/3/-2;
+  grid-area: 3/2/3/-1;
   align-self: flex-start;
 }
 
 span:nth-of-type(1) {
-  grid-area: 3/2/3/-2;
+  grid-area: 3/2/3/-1;
   align-self: flex-end;
   font-size: 12px;
   padding-bottom: 30px;
@@ -257,7 +257,7 @@ span:nth-of-type(1) {
 }
 
 span:nth-of-type(2) {
-  grid-area: 3/5/3/5;
+  grid-area: 3/5/3/-1;
   align-self: flex-end;
   font-size: 12px;
   padding-bottom: 30px;
@@ -266,7 +266,7 @@ span:nth-of-type(2) {
 }
 
 p:nth-of-type(2) {
-  grid-area: 4/2/4/2;
+  grid-area: 4/2/4/-1;
   align-self: flex-start;
 }
 
@@ -396,4 +396,164 @@ span:nth-of-type(8) {
   grid-area: 8/2/8/-2;
   align-self: center;
   color: #FF0000;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 110vh;
+    grid-template-rows: 82% 18%;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 5% 30% 35% 25% 5%;
+    grid-template-rows: 10% 2% 20% 10% 10% 30% 4% 6% 8%;
+  }
+
+  div {
+    grid-area: 1/4/1/4;
+    width: 50%;
+    justify-self: flex-end;
+    align-self: center;
+    font-size: 40px;
+  }
+
+  .fa-moon {
+    justify-self: flex-end;
+  }
+
+  .fa-sun {
+    justify-self: flex-end;
+  }
+
+  p:nth-of-type(1) {
+    grid-area: 3/2/3/5;
+    align-self: flex-start;
+    margin-top: 3%;
+  }
+
+  span:nth-of-type(1) {
+    grid-area: 3/2/3/5;
+    align-self: center;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    color: #FF0000;
+    margin-top: 14%;
+  }
+
+  span:nth-of-type(2) {
+    grid-area: 3/2/3/5;
+    align-self: center;
+    margin-top: 43%;
+  }
+
+  p:nth-of-type(2) {
+    grid-area: 4/2/4/5;
+    align-self: flex-start;
+    margin-top: 2%;
+  }
+
+  span:nth-of-type(3) {
+    grid-area: 4/2/4/5;
+    align-self: center;
+    padding-bottom: 0px;
+    margin-top: 24%;
+  }
+
+  p:nth-of-type(3) {
+    grid-area: 5/2/5/5;
+    margin-top: 3%;
+  }
+
+  span:nth-of-type(4) {
+    grid-area: 5/2/5/5;
+    align-self: center;
+    padding-bottom: 0px;
+    margin-top: 27%;
+  }
+
+  p:nth-of-type(4) {
+    grid-area: 6/2/6/5;
+    margin-top: 30px;
+  }
+
+  span:nth-of-type(5) {
+    grid-area: 7/2/7/5;
+    align-self: flex-start;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-top: 0px;
+    color: #FF0000;
+  }
+
+  .resultError {
+    grid-area: 8/3/8/-1;
+    font-size: 16px;
+    align-self: flex-start;
+    width: 95%;
+    height: 80%;
+    color: #D80404;
+  }
+
+  .fa-circle-xmark {
+    font-size: 25px;
+  }
+
+  .resultValidated {
+    grid-area: 8/3/8/-2;
+    align-self: flex-start;
+    font-size: 22px;
+    width: 90%;
+    height: 80%;
+  }
+
+  .fa-circle-check {
+    font-size: 35px;
+  }
+
+  .firstName {
+    grid-area: 3/2/3/4;
+    align-self: center;
+    margin-top: 10%;
+    height: 25%;
+    margin-bottom: 20%;
+  }
+
+  .lastName {
+    grid-area: 3/2/3/4;
+    align-self: flex-end;
+    height: 25%;
+    margin-bottom: 5%;
+  }
+
+  .mail {
+    grid-area: 4/2/4/4;
+    align-self: flex-end;
+    height: 50%;
+  }
+
+  .subject {
+    grid-area: 5/2/5/4;
+    align-self: center;
+    height: 50%;
+    margin-top: 18%;
+  }
+
+  .message {
+    grid-area: 6/2/6/5;
+    align-self: flex-end;
+    height: 72%;
+  }
+
+  button {
+    height: 25%;
+    width: 22%;
+  }
+
+  span:nth-of-type(8) {
+    grid-area: 9/2/9/5;
+    align-self: flex-end;
+    padding-bottom: 2%;
+  }
 }/*# sourceMappingURL=style.css.map */
