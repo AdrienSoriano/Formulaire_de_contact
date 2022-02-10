@@ -13,7 +13,10 @@ $spanFontSizePhone : 10px;
 $placeHolderFontSize : 16px;
 
 
+
 // Light mode : 
+
+
 
 $formBackgroundColor : #F9F9F9;
 $inputBackgroundColor : #FFFFFF;
@@ -25,7 +28,11 @@ $caretColor : #00B1E9;
 $moonHover : #212121;
 $validationBackgroundColor : #9FCE97;
 
+
+
 // Dark mode : 
+
+
 
 $formBackgroundColorDark : #0d0d1c;
 $inputBackgroundColorDark : #567de2;
@@ -34,6 +41,12 @@ $sunColor : #e4a90f;
 $sunHover : #00f0ff;
 $validationBackgroundColorDark: #B2DFAB;
 $buttonBackgroundColorClickedDark: #193B70;
+
+
+
+// COLORS
+
+
 
 .light-mode{
     background-image: url("../Assets/Media/light_background.png");
@@ -132,7 +145,15 @@ $buttonBackgroundColorClickedDark: #193B70;
     }
 }
 
+
+
+
+
 // VERSION DESKTOP !!
+
+
+
+
 
 *{
     margin: 0;
@@ -369,7 +390,15 @@ span:nth-of-type(8){
     color: $spanColor;
 }
 
+
+
+
+
 // VERSION TABLETTE
+
+
+
+
 
 @media screen and (max-width: 768px){
 
@@ -508,3 +537,303 @@ span:nth-of-type(8){
     }
 }
 
+
+
+// VERSION MOBILE 425px
+
+
+
+@media screen and (max-width: 425px){
+
+    body{
+        height: 100vh;
+        grid-template-rows: 78% 22%;
+        grid-template-columns: 9% 91%;
+    }
+    form{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 5% 30% 35% 25% 5%;
+        grid-template-rows: 10% 2% 25% 10% 10% 20% 4% 14% 5%;
+    }
+    div{
+        grid-area: 1 / 4 / 1 / 4;
+        width: 50%;
+        justify-self: flex-end;
+        align-self: center;
+        font-size: 40px;
+    }
+    p, input{
+        font-size: 18px;
+    }
+    .fa-moon{
+        justify-self: flex-end;
+    }
+    .fa-sun{
+        justify-self: flex-end;
+    }
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-start;
+        margin-top: 3%;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+        margin-top: 19%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 62%;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-start;
+        margin-top: 2%;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 28%;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 5;
+        margin-top: 5%;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 35%;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 5;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / 5;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 0px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 8 / 2 / 8 / -1;
+        font-size: 18px;
+        align-self: flex-end;
+        width: 95%;
+        height: 50%;
+        color: $errorColor;
+        visibility: visible;
+    }
+    .fa-circle-xmark{
+        font-size: 25px;
+    }
+    .resultValidated{
+        grid-area: 8 / 2 / 8 / -1;
+        align-self: flex-end;
+        font-size: 22px;
+        width: 80%;
+        height: 45%;
+        visibility: hidden;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 10%;
+        height: 25%;
+        margin-bottom: 20%;
+    }
+    .lastName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-end;
+        height: 25%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-end;
+        height: 50%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        height: 50%;
+        margin-top: 18%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / 5;
+        align-self: flex-end;
+        height: 60%;
+    }
+    button{
+        height: 20%;
+        width: 50%;
+    }
+    span:nth-of-type(8){
+        grid-area: 9 / 2 / 9 / 5;
+        align-self: flex-end;
+        padding-bottom: 2%;
+        font-size: 10px;
+    }
+    
+}
+
+
+
+// VERSION MOBILE 375px
+
+
+
+@media screen and (max-width: 375px){
+
+    body{
+        height: 100vh;
+        grid-template-rows: 78% 22%;
+        grid-template-columns: 9% 91%;
+    }
+    form{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 5% 30% 35% 25% 5%;
+        grid-template-rows: 10% 2% 20% 10% 10% 25% 4% 14% 5%;
+    }
+    div{
+        grid-area: 1 / 4 / 1 / 4;
+        width: 50%;
+        justify-self: flex-end;
+        align-self: center;
+        font-size: 40px;
+    }
+    p, input{
+        font-size: 18px;
+    }
+    .fa-moon{
+        justify-self: flex-end;
+    }
+    .fa-sun{
+        justify-self: flex-end;
+    }
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-start;
+        margin-top: 3%;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+        margin-top: 19%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 58%;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-start;
+        margin-top: 2%;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 32%;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 5;
+        margin-top: 5%;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 37%;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 5;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / 5;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 0px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 8 / 2 / 8 / -1;
+        font-size: 16px;
+        align-self: flex-end;
+        width: 96%;
+        height: 40%;
+        color: $errorColor;
+        visibility: hidden;
+    }
+    .fa-circle-xmark{
+        font-size: 25px;
+    }
+    .resultValidated{
+        grid-area: 8 / 2 / 8 / -1;
+        align-self: flex-end;
+        justify-self: flex-start;
+        font-size: 20px;
+        width: 80%;
+        height: 40%;
+        visibility: visible;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 10%;
+        height: 25%;
+        margin-bottom: 20%;
+    }
+    .lastName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-end;
+        height: 25%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-end;
+        height: 50%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        height: 50%;
+        margin-top: 18%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / 5;
+        align-self: flex-end;
+        height: 60%;
+    }
+    button{
+        height: 20%;
+        width: 50%;
+    }
+    span:nth-of-type(8){
+        grid-area: 9 / 2 / 9 / -1;
+        align-self: flex-end;
+        padding-bottom: 2%;
+        font-size: 10px;
+    }
+    
+}
