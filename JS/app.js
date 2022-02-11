@@ -17,7 +17,7 @@ dark.addEventListener('click', function () {
     body.className = currentClass == "light-mode" ? "dark-mode" : "light-mode";
   })
 
-valider.addEventListener('click', function salut(){
+valider.addEventListener('click', function (){
     let valeur_prenom = prenom.value;
     let valeur_nom = nom.value;
     let valeur_mail = mail.value;
@@ -28,7 +28,10 @@ valider.addEventListener('click', function salut(){
     let background_mail = document.querySelector('.mail');
     let background_subject = document.querySelector('.subject');
     let background_message = document.querySelector('.message');
-    
+    let Error = document.querySelector(".resultError");
+    let Validated = document.querySelector(".resultValidated")
+    let Re = /^[a-z0-9.-]{2,}@+[a-z0-9.-]{2,}$/i
+
     if(valeur_prenom == ""){
         error_first_name.innerHTML = "Champ obligatoire.";
         background_first_name.style.backgroundColor = 'rgba(255, 14, 14, 0.2)';
@@ -45,10 +48,11 @@ valider.addEventListener('click', function salut(){
       error_last_name.innerHTML = "";
       background_last_name.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
     }
-    if(valeur_mail == ""){
-      error_mail.innerHTML = "Champ obligatoire.";
+    if (Re.test(valeur_mail) == false) {
+      error_mail.innerHTML = "Veuillez respecter le format demander (my.email@example.com)."
       background_mail.style.backgroundColor = 'rgba(255, 14, 14, 0.2)';
     }
+    
     else{
       error_mail.innerHTML = "";
       background_mail.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
@@ -69,5 +73,14 @@ valider.addEventListener('click', function salut(){
       error_message.innerHTML = "";
       background_message.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
     }
+    if((valeur_mail == "")||(valeur_message == "")||(valeur_nom == "")||(valeur_prenom == "")||(valeur_sujet == "")){
+      Error.style.visibility = 'visible';
+      Validated.style.visibility = 'hidden'
+    }
+    else{
+      Error.style.visibility = 'hidden';
+      Validated.style.visibility = 'visible'
+    }
 
 })
+
