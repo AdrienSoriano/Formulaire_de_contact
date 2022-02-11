@@ -12,34 +12,34 @@
 </head>
 <body id="body" class="light-mode">
 
-    <form action="">
+    <form action="PHP/script.php" method="post">
         <h1>Nous contacter</h1>
         <div class="dark">
             <i class="fa-solid fa-moon"></i>
             <i class="fa-solid fa-sun"></i>
         </div>
         <p>Entrez votre prénom et votre nom<span>*</span> :</p>
-        <input type="text" class="firstName" placeholder="Prénom">
+        <input type="text" class="firstName" name="prenom" placeholder="Prénom" required>
         <span id="first_name"></span>
-        <input type="text" class="lastName" placeholder="Nom">
+        <input type="text" class="lastName" name="nom" placeholder="Nom">
         <span id="last_name"></span>
         <p>Entrez votre E-mail<span>*</span> :</p>
-        <input type="email" name="user_email" class="mail" placeholder="ex: my.mail@example.com">
+        <input type="email" name="user_email" class="mail" placeholder="ex: my.mail@example.com" required>
         <span id="email"></span>
         <p>Sujet<span>*</span> :</p>
-        <input type="text" class="subject" placeholder="Sujet du message">
+        <input type="text" class="subject" name="sujet" placeholder="Sujet du message">
         <span id="subject"></span>
         <p>Message<span>*</span> :</p>
-        <textarea style="resize:none" name="" class="message" cols="30" rows="10" placeholder="Saisie du message..."></textarea>
+        <textarea style="resize:none" name="message" class="message" cols="30" rows="10" placeholder="Saisie du message..."></textarea>
         <span id="message"></span>
 
         <span class="resultError"><i class="fa-solid fa-circle-xmark"></i> <span></span> Veuillez bien remplir le formulaire !</span>
         <span class="resultValidated"><i class="fa-solid fa-circle-check"></i> <span></span> Demande envoyée !</span>
-        
+        <button name="valider" type="submit">Soumettre</button>
         <span>*Les champs sont obligatoires et ne doivent en aucun cas être vides.</span>
         
     </form>
-    <button>Soumettre</button>
+    
 
     <script src="JS/app.js"></script>
 </body>
