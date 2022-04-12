@@ -3,6 +3,7 @@
 }
 .light-mode form {
   background: rgba(243, 243, 243, 0.6);
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
 }
 .light-mode h1 {
   color: #212121;
@@ -48,6 +49,7 @@
 }
 .dark-mode form {
   background: rgba(13, 13, 28, 0.75);
+  box-shadow: 10px 10px 4px rgba(0, 240, 255, 0.2);
 }
 .dark-mode h1 {
   color: #cacaca;
@@ -118,7 +120,6 @@ form {
   align-self: center;
   height: 90%;
   width: 65%;
-  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   display: grid;
   grid-template-columns: 5% 20% 20% 10% 40% 5%;
