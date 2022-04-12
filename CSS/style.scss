@@ -1,0 +1,1151 @@
+$h1FontStyle : Varela;
+$textFontStyle : Sarala;
+$validationColor : #0DA02E;
+$errorColor : #D80404;
+$errorBackgroundColor : #FF0E0E;
+$h1FontSize : 30px;
+$pFontSize : 20px;
+$inputFontSize : 20px;
+$spanFontSize : 14px;
+$pFontSizePhone : 18px;
+$inputFontSizePhone : 18px;
+$spanFontSizePhone : 10px;
+$placeHolderFontSize : 16px;
+
+
+
+// Light mode : 
+
+
+
+$formBackgroundColor : #F9F9F9;
+$inputBackgroundColor : #FFFFFF;
+$buttonBackgroundColor : #1662D3;
+$textColor : #212121;
+$spanColor : #FF0000;
+$placeholderColor : #898989;
+$caretColor : #00B1E9;
+$moonHover : #212121;
+$validationBackgroundColor : #9FCE97;
+
+
+
+// Dark mode : 
+
+
+
+$formBackgroundColorDark : #0d0d1c;
+$inputBackgroundColorDark : #567de2;
+$textColorDark : #cacaca;
+$sunColor : #e4a90f;
+$sunHover : #00f0ff;
+$validationBackgroundColorDark: #B2DFAB;
+$buttonBackgroundColorClickedDark: #193B70;
+
+
+
+// COLORS
+
+
+
+.light-mode{
+    background-image: url("../Assets/Media/light_background.png");
+    
+    form{
+        background: rgba(243, 243, 243, 0.6);
+        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    }
+    h1{
+        color: $textColor;
+    }
+    .fa-moon:active{
+        background-color: #565656;
+        color: transparent;
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+    }
+    .fa-sun{
+        visibility: hidden;
+    }
+    p{
+        color: $textColor;
+    }
+    input{
+        color: $textColor;
+        background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
+    }
+    textarea{
+        color: $textColor;
+        background-color: rgba(255, 255, 255, 0.7); // fond de l'input opacité à 70%
+    }
+    button{
+        background-color: rgba(22, 98, 211, 0.6);
+    }
+    button:hover{
+        background-color: rgba(22, 98, 211, 0.4);
+    }
+    button:active{
+        background: rgba(22, 98, 211, 0.25);
+        box-shadow: inset 0px 4px 4px #0F0F0F;
+    }
+    .resultValidated{
+        background: rgba(159, 206, 151, 0.6);
+    }
+}
+
+.dark-mode{
+    background-image: url("../Assets/Media/dark_background.png");
+    
+    form{
+        background: rgba(13, 13, 28, 0.75);
+        box-shadow: 10px 10px 4px rgba(0, 240, 255, 0.2);
+    }
+    h1{
+        color: $textColorDark;
+    }
+    .fa-moon{
+        visibility: hidden;
+    }
+    .fa-sun{
+        visibility: visible;
+    }
+    .fa-sun:active{
+        background-color: #565656;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(0, 255, 242, 0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+    }
+    p{
+        color: $textColorDark;
+    }
+    input{
+        color: $textColorDark;
+        background-color: rgba(86, 125, 226, 0.2); // fond de l'input opacité à 20%
+    }
+    textarea{
+        color: $textColorDark;
+        background-color: rgba(86, 125, 226, 0.2); // fond de l'input opacité à 20%
+    }
+    button{
+        background-color: rgba(22, 98, 211);
+        color: $textColorDark;
+    }
+    button:hover{
+        background: #3687FF;
+        box-shadow: 0px 0px 15px #00F0FF;
+    }
+    button:active{
+        background: $buttonBackgroundColorClickedDark;
+        box-shadow: inset 0px 6px 10px rgba(255, 255, 255, 0.25);
+    }
+    .resultValidated{
+        background: rgba(156, 221, 145, 0.4);
+    }
+}
+
+
+
+
+
+// VERSION DESKTOP !!
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    
+    height: 120vh;
+    width: 99vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: 21% 80%;
+    grid-template-rows: 85% 15%;
+}
+form{
+    grid-area: 1 / 1 / -1 / -1;
+    justify-self: center;
+    align-self: center;
+    height: 90%;
+    width: 65%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 5% 20% 20% 10% 40% 5%;
+    grid-template-rows: 10% 10% 15% 15% 15% 20% 10% 5%;
+}
+h1{
+    font-size: $h1FontSize;
+    font-family: $h1FontStyle;
+    grid-area: 1 / 1 / 1 / -1;
+    justify-self: center;
+    align-self: flex-end;
+}
+span{
+    font-family: $textFontStyle;
+    font-size: $spanFontSize;
+}
+div{
+    grid-area: 1 / 6 / 1 / 6;
+    width: 100%;
+    height: 100%;
+    justify-items: flex-start;
+    align-self: center;
+    font-size: 50px;
+    display: grid;
+    grid-template: 100% / 100%;
+}
+.fa-moon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+.fa-moon{
+    grid-area: 1 / 1 / 1 / 1;
+    justify-self: center;
+    align-self: center;
+}
+.fa-sun{
+    grid-area: 1 / 1 / 1 / 1;
+    justify-items: center;
+    align-self: center;
+    color: $sunColor;
+}
+.fa-sun:hover{
+    cursor: pointer;
+    color: $sunHover;
+    text-shadow: 0px 0px 15px rgba(0, 238, 255, 0.7);
+}
+p{
+    font-size: $pFontSize;
+    font-family: $textFontStyle;
+}
+input{
+    border: none;
+    outline: none;
+    font-size: 20px;
+    caret-color: $caretColor;
+    padding-left: 10px;
+}
+::placeholder{
+    font-family: $textFontStyle;
+    font-size: 16px;
+    position: absolute;
+}
+textarea{
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: $textFontStyle;
+    caret-color: $caretColor;
+    padding-left: 10px;
+}
+input:focus::placeholder{
+    transition: 0.5s ease-in;
+    color: transparent;
+}
+textarea:focus::placeholder{
+    transition: 0.5s ease-in;
+    color: transparent;
+}
+p:nth-of-type(1){
+    grid-area: 3 / 2 / 3 / -1;
+    align-self: flex-start;
+}
+span:nth-of-type(1){
+    grid-area: 3 / 2 / 3 / -1;
+    align-self: flex-end;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    color: $spanColor;
+}
+span:nth-of-type(2){
+    grid-area: 3 / 5 / 3 / -1;
+    align-self: flex-end;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    color: $spanColor;
+}
+p:nth-of-type(2){
+    grid-area: 4 / 2 / 4 / -1;
+    align-self: flex-start;
+}
+span:nth-of-type(3){
+    grid-area: 4 / 2 / 4 / -2;
+    align-self: flex-end;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    color: $spanColor;
+}
+p:nth-of-type(3){
+    grid-area: 5 / 2 / 5 / 2;
+}
+span:nth-of-type(4){
+    grid-area: 5 / 2 / 5 / -2;
+    align-self: flex-end;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    color: $spanColor;
+}
+p:nth-of-type(4){
+    grid-area: 6 / 2 / 6 / 2;
+}
+span:nth-of-type(5){
+    grid-area: 7 / 2 / 7 / -2;
+    align-self: flex-start;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: $spanColor;
+}
+.resultError{
+    grid-area: 7 / 3 / 7 / -2;
+    justify-self: flex-start;
+    align-self: center;
+    font-size: 22px;
+    background: rgba(255, 14, 14, 0.2);
+    border-radius: 50px;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    color: $errorColor;
+}
+.fa-circle-xmark{
+    font-size: 35px;
+}
+.resultValidated{
+    grid-area: 7 / 3 / 7 / -2;
+    justify-self: flex-start;
+    align-self: center;
+    font-size: 22px;
+    color: $validationColor;
+    border-radius: 50px;
+    text-align: center;
+    width: 35%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.fa-circle-check{
+    font-size: 35px;
+}
+.firstName{
+    grid-area: 3 / 2 / 3 / -4;
+    align-self: center;
+    height: 30%;
+}
+.lastName{
+    grid-area: 3 / 5 / 3 / 5;
+    align-self: center;
+    height: 30%;
+}
+.mail{
+    grid-area: 4 / 2 / 4 / -4;
+    align-self: center;
+    height: 30%;
+}
+.subject{
+    grid-area: 5 / 2 / 5 / -4;
+    align-self: center;
+    height: 30%;
+}
+.message{
+    grid-area: 6 / 2 / 6 / -2;
+    align-self: flex-end;
+    height: 72%;
+}
+button{
+    grid-area: 7 / 2 / 7 / 2;
+    font-family: $h1FontStyle;
+    font-size: $pFontSize;
+    font-family: $textFontStyle;
+    align-self: center;
+    height: 40%;
+    width: 70%;
+    background-color: $buttonBackgroundColor;
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px rgba(23, 23, 23, 0.25);
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+}
+span:nth-of-type(8){
+    grid-area: 8 / 2 / 8 / -2;
+    align-self: center;
+    color: $spanColor;
+}
+
+
+
+
+
+// VERSION PC PORTABLE
+
+
+
+
+
+
+@media screen and (max-width: 1440px){
+    
+   
+    
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / -1;
+        align-self: flex-start;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / -1;
+        align-self: flex-end;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        margin-top: 10%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 5 / 3 / -1;
+        align-self: flex-end;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / -1;
+        align-self: flex-start;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / -2;
+        align-self: flex-end;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 2;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / -2;
+        align-self: flex-end;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 2;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / -2;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 5px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 7 / 3 / 7 / -2;
+        justify-self: flex-start;
+        align-self: center;
+        font-size: 22px;
+        background: rgba(255, 14, 14, 0.2);
+        border-radius: 50px;
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        color: $errorColor;
+    }
+    .fa-circle-xmark{
+        font-size: 35px;
+    }
+    .resultValidated{
+        grid-area: 7 / 3 / 7 / -2;
+        justify-self: flex-start;
+        align-self: center;
+        font-size: 22px;
+        color: $validationColor;
+        border-radius: 50px;
+        text-align: center;
+        width: 35%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / -4;
+        align-self: center;
+        height: 30%;
+    }
+    .lastName{
+        grid-area: 3 / 5 / 3 / 5;
+        align-self: center;
+        height: 30%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / -4;
+        align-self: center;
+        height: 30%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / -4;
+        align-self: center;
+        height: 30%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / -2;
+        align-self: flex-end;
+        height: 72%;
+    }
+    button{
+        grid-area: 7 / 2 / 7 / 2;
+        font-family: $h1FontStyle;
+        font-size: $pFontSize;
+        font-family: $textFontStyle;
+        align-self: center;
+        height: 40%;
+        width: 70%;
+        background-color: $buttonBackgroundColor;
+        border-radius: 5px;
+        box-shadow: 5px 5px 4px rgba(23, 23, 23, 0.25);
+        border: none;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    span:nth-of-type(8){
+        grid-area: 8 / 2 / 8 / -2;
+        align-self: center;
+        color: $spanColor;
+    }
+
+    
+}
+
+
+
+
+
+
+// VERSION LAPTOP
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+    body{
+        grid-template-rows: 82% 18%;
+    }
+    form{
+        display: grid;
+        grid-template-columns: 5% 30% 35% 25% 5%;
+        grid-template-rows: 10% 2% 20% 10% 10% 30% 4% 6% 8%;
+    }
+    div{
+        grid-area: 1 / 4 / 1 / 4;
+        width: 50%;
+        justify-self: flex-end;
+        align-self: center;
+        font-size: 40px;
+    }
+    .fa-moon{
+        justify-self: flex-end;
+    }
+    .fa-sun{
+        justify-self: flex-end;
+    }
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-start;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+        margin-top: 8%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 31%;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-start;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 18%;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 5;
+        margin-top: 3%;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 23%;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 5;
+        margin-top: 30px;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / 5;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 0px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 8 / 3 / 8 / -1;
+        font-size: 18px;
+        align-self: flex-start;
+        width: 80%;
+        height: 80%;
+        color: $errorColor;
+    }
+    .fa-circle-xmark{
+        font-size: 25px;
+    }
+    .resultValidated{
+        grid-area: 8 / 3 / 8 / -2;
+        align-self: flex-start;
+        font-size: 22px;
+        width: 70%;
+        height: 80%;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / 4;
+        align-self: center;
+        margin-top: 10%;
+        height: 25%;
+        margin-bottom: 20%;
+    }
+    .lastName{
+        grid-area: 3 / 2 / 3 / 4;
+        align-self: flex-end;
+        height: 25%;
+        margin-bottom: 5%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / 4;
+        align-self: flex-end;
+        height: 50%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / 4;
+        align-self: center;
+        height: 50%;
+        margin-top: 18%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / 5;
+        align-self: flex-end;
+        height: 72%;
+    }
+    button{
+        grid-area: 8 / 2 / 8 / 2;
+        height: 70%;
+        width: 80%;
+        align-self: flex-start;
+    }
+    span:nth-of-type(8){
+        grid-area: 9 / 2 / 9 / 5;
+        align-self: flex-end;
+        padding-bottom: 2%;
+    }
+}
+
+
+
+
+
+// VERSION TABLETTE
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    body{
+        height: 110vh;
+        grid-template-rows: 82% 18%;
+    }
+    form{
+        display: grid;
+        grid-template-columns: 5% 30% 35% 25% 5%;
+        grid-template-rows: 10% 2% 20% 10% 10% 30% 4% 6% 8%;
+    }
+    div{
+        grid-area: 1 / 4 / 1 / 4;
+        width: 50%;
+        justify-self: flex-end;
+        align-self: center;
+        font-size: 40px;
+    }
+    .fa-moon{
+        justify-self: flex-end;
+    }
+    .fa-sun{
+        justify-self: flex-end;
+    }
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-start;
+        margin-top: 3%;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+        margin-top: 14%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 43%;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-start;
+        margin-top: 2%;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 24%;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 5;
+        margin-top: 3%;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 27%;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 5;
+        margin-top: 30px;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / 5;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 0px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 8 / 3 / 8 / -1;
+        font-size: 16px;
+        align-self: flex-start;
+        width: 95%;
+        height: 80%;
+        color: $errorColor;
+    }
+    .fa-circle-xmark{
+        font-size: 25px;
+    }
+    .resultValidated{
+        grid-area: 8 / 3 / 8 / -2;
+        align-self: flex-start;
+        font-size: 22px;
+        width: 90%;
+        height: 80%;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / 4;
+        align-self: center;
+        margin-top: 10%;
+        height: 25%;
+        margin-bottom: 20%;
+    }
+    .lastName{
+        grid-area: 3 / 2 / 3 / 4;
+        align-self: flex-end;
+        height: 25%;
+        margin-bottom: 5%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / 4;
+        align-self: flex-end;
+        height: 50%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / 4;
+        align-self: center;
+        height: 50%;
+        margin-top: 18%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / 5;
+        align-self: flex-end;
+        height: 72%;
+    }
+    button{
+        height: 70%;
+        width: 90%;
+    }
+    span:nth-of-type(8){
+        grid-area: 9 / 2 / 9 / 5;
+        align-self: flex-end;
+        padding-bottom: 2%;
+    }
+}
+
+
+
+// VERSION MOBILE 425px
+
+
+
+@media screen and (max-width: 425px){
+
+    body{
+        height: 100vh;
+        grid-template-rows: 78% 22%;
+        grid-template-columns: 9% 91%;
+    }
+    form{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 5% 30% 35% 25% 5%;
+        grid-template-rows: 10% 2% 25% 10% 10% 20% 4% 14% 5%;
+    }
+    div{
+        grid-area: 1 / 4 / 1 / 4;
+        width: 50%;
+        justify-self: flex-end;
+        align-self: center;
+        font-size: 40px;
+    }
+    p, input{
+        font-size: 18px;
+    }
+    .fa-moon{
+        justify-self: flex-end;
+    }
+    .fa-sun{
+        justify-self: flex-end;
+    }
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-start;
+        margin-top: 3%;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+        margin-top: 19%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 62%;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-start;
+        margin-top: 2%;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / -1;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 28%;
+        font-size: 11px;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 5;
+        margin-top: 5%;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 35%;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 5;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / 5;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 0px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 8 / 2 / 8 / -1;
+        font-size: 18px;
+        align-self: flex-end;
+        width: 95%;
+        height: 50%;
+        color: $errorColor;
+        visibility: visible;
+    }
+    .fa-circle-xmark{
+        font-size: 25px;
+    }
+    .resultValidated{
+        grid-area: 8 / 2 / 8 / -1;
+        align-self: flex-end;
+        font-size: 22px;
+        width: 80%;
+        height: 45%;
+        visibility: hidden;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 10%;
+        height: 25%;
+        margin-bottom: 20%;
+    }
+    .lastName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-end;
+        height: 25%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-end;
+        height: 50%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        height: 50%;
+        margin-top: 18%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / 5;
+        align-self: flex-end;
+        height: 60%;
+    }
+    button{
+        height: 35%;
+        width: 140%;
+    }
+    span:nth-of-type(8){
+        grid-area: 9 / 2 / 9 / 5;
+        align-self: flex-end;
+        padding-bottom: 2%;
+        font-size: 10px;
+    }
+    
+}
+
+
+
+// VERSION MOBILE 375px
+
+
+
+@media screen and (max-width: 375px){
+
+    body{
+        height: 100vh;
+        grid-template-rows: 78% 22%;
+        grid-template-columns: 9% 91%;
+    }
+    form{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 5% 30% 35% 25% 5%;
+        grid-template-rows: 10% 2% 20% 10% 10% 25% 4% 14% 5%;
+    }
+    div{
+        grid-area: 1 / 4 / 1 / 4;
+        width: 50%;
+        justify-self: flex-end;
+        align-self: center;
+        font-size: 40px;
+    }
+    p, input{
+        font-size: 18px;
+    }
+    .fa-moon{
+        justify-self: flex-end;
+    }
+    .fa-sun{
+        justify-self: flex-end;
+    }
+    p:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-start;
+        margin-top: 3%;
+    }
+    span:nth-of-type(1){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        font-size: 12px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        color: $spanColor;
+        margin-top: 19%;
+    }
+    span:nth-of-type(2){
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 58%;
+    }
+    p:nth-of-type(2){
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-start;
+        margin-top: 2%;
+    }
+    span:nth-of-type(3){
+        grid-area: 4 / 2 / 4 / -1;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 32%;
+        font-size: 10px;
+    }
+    p:nth-of-type(3){
+        grid-area: 5 / 2 / 5 / 5;
+        margin-top: 5%;
+    }
+    span:nth-of-type(4){
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        padding-bottom: 0px;
+        margin-top: 37%;
+    }
+    p:nth-of-type(4){
+        grid-area: 6 / 2 / 6 / 5;
+    }
+    span:nth-of-type(5){
+        grid-area: 7 / 2 / 7 / 5;
+        align-self: flex-start;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 0px;
+        color: $spanColor;
+    }
+    .resultError{
+        grid-area: 8 / 2 / 8 / -1;
+        font-size: 16px;
+        align-self: flex-end;
+        width: 96%;
+        height: 40%;
+        color: $errorColor;
+        visibility: hidden;
+    }
+    .fa-circle-xmark{
+        font-size: 25px;
+    }
+    .resultValidated{
+        grid-area: 8 / 2 / 8 / -1;
+        align-self: flex-end;
+        justify-self: flex-start;
+        font-size: 20px;
+        width: 80%;
+        height: 40%;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .firstName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: center;
+        margin-top: 10%;
+        height: 25%;
+        margin-bottom: 20%;
+    }
+    .lastName{
+        grid-area: 3 / 2 / 3 / 5;
+        align-self: flex-end;
+        height: 25%;
+    }
+    .mail{
+        grid-area: 4 / 2 / 4 / 5;
+        align-self: flex-end;
+        height: 50%;
+    }
+    .subject{
+        grid-area: 5 / 2 / 5 / 5;
+        align-self: center;
+        height: 50%;
+        margin-top: 18%;
+    }
+    .message{
+        grid-area: 6 / 2 / 6 / 5;
+        align-self: flex-end;
+        height: 60%;
+    }
+    button{
+        height: 35%;
+        width: 140%;
+    }
+    span:nth-of-type(8){
+        grid-area: 9 / 2 / 9 / -1;
+        align-self: flex-end;
+        padding-bottom: 2%;
+        font-size: 10px;
+    }
+    
+}
